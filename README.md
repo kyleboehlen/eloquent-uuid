@@ -18,7 +18,7 @@ In order to use this trait, your **schema** must be something like:
 	// ...
 	Schema::create('users', function (Blueprint $table) {
 		$table->primary('id');
-		$table->uuid('uuid'); // this will create a CHAR(36) field
+		$table->uuid('uuid')->unique(); // this will create a CHAR(36) field
 		$table->string('username', 32);
 		$table->string('password', 50);
 		// ...
