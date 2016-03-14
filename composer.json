@@ -1,0 +1,21 @@
+{
+    "name": "jamesmills/eloquent-uuid",
+    "description": "A Laravel Eloquent Model trait for adding and using a uuid with models",
+    "type": "type",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Mills",
+            "email": "james@jamesmills.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ramsey/uuid": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "JamesMills\\Uuid\\": "src/"
+        }
+    }
+}
