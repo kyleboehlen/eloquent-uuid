@@ -13,7 +13,7 @@ composer require jamesmills/eloquent-uuid
 
 In order to use this trait, your **schema** must be something like:
 
-```
+```php
 <?php
 	// ...
 	Schema::create('users', function (Blueprint $table) {
@@ -29,7 +29,7 @@ In order to use this trait, your **schema** must be something like:
 
 In order to use this in your models, just put `use HasUuidTrait;`:
 
-```
+```php
 <?php
 
 namespace App;
@@ -39,4 +39,47 @@ class User extends Eloquent
 {
 	use HasUuidTrait;
 }
+```
+
+#### Querying your models
+
+You may use the `findByUuidOrFail` method to try and fetch a model directly:
+
+```php
+<?php
+
+Route::get('/user/{uuid}', function($uuid) {
+    try {
+        return App\User::findByUuidOrFail($uuid);
+    } catch (Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+        abort(404);
+    }
+});
+```
+
+You may also use the `withUuid` and `withUuids` local query scopes with the query builder.
+
+```php
+<?php
+
+Route::get('/user/{uuid}', function($uuid) {
+    $user = App\User::withUuid($uuid)->first();
+    if (! $user) {
+        // Do something else...
+    }
+});
+```
+```php
+<?php
+
+Route::delete('/users', function(Request $request) {
+    // Receive an array of UUIDs
+    $uuids = $request->input('uuids');
+
+    // Try to get the Users
+    $users = App\User::withUuids($uuids)->all();
+    
+    // Handle the delete and return
+    $users->delete();
+});
 ```
