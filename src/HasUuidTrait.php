@@ -44,4 +44,14 @@ trait HasUuidTrait
     {
         return $query->whereIn('uuid', $uuids);
     }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'uuid';
+    }
 }
