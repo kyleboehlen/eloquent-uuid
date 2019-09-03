@@ -63,6 +63,14 @@ Route::get('/user/{uuid}', function($uuid) {
     }
 });
 ```
+Since `uuid` gets registered as `Route Key` using implicit binding[https://laravel.com/docs/5.8/routing#implicit-binding], your resource controllers will use `uuid` instead of default `id` column.
+
+```php
+<?php
+
+    php artisan make:controller UserController --resource
+```
+/users/{user} route uses `uuid` i.e. /users/bff37872-1450-47c7-b9f7-9a6d917796cf
 
 You may also use the `withUuid` and `withUuids` local query scopes with the query builder.
 
