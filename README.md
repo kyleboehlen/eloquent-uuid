@@ -3,7 +3,7 @@
 [![Packagist](https://img.shields.io/packagist/v/jamesmills/eloquent-uuid.svg?style=for-the-badge)](https://packagist.org/packages/jamesmills/eloquent-uuid)
 ![Packagist](https://img.shields.io/packagist/dt/jamesmills/eloquent-uuid.svg?style=for-the-badge)
 ![Packagist](https://img.shields.io/packagist/l/jamesmills/eloquent-uuid?style=for-the-badge)
-[![Buy us a tree](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen?style=for-the-badge)](https://offset.earth/jamesmills)
+[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=for-the-badge)](https://offset.earth/treeware?gift-trees)
 
 A Laravel Eloquent Model trait for adding and using a uuid with models.
 
@@ -102,8 +102,10 @@ Route::delete('/users', function(Request $request) {
 
 ## Treeware
 
-You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
+You're free to use this package, but if it makes it to your production environment you are required to buy the world a tree.
 
 It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to <a href="https://www.bbc.co.uk/news/science-environment-48870920">plant trees</a>. If you contribute to my forest you’ll be creating employment for local families and restoring wildlife habitats.
 
-You can buy trees at for my forest here [offset.earth/jamesmills](https://offset.earth/jamesmills)
+You can buy trees at for my forest here [offset.earth/treeware](https://offset.earth/treeware?gift-trees)
+
+Read more about Treeware at [treeware.earth](http://treeware.earth?utm_referrer=github_licence_link)
