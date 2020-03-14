@@ -100,8 +100,8 @@ Route::delete('/users', function(Request $request) {
 });
 ```
 
-## Treeware
+## Licence
 
-If you use this package, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/jamesmills/eloquent-uuid) to thank us for our work.
+This package is 100% free and open-source, under the MIT license. Use it however you want.
 
-By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.  Read more about Treeware at [treeware.earth](http://treeware.earth)
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/jamesmills/eloquent-uuid) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
