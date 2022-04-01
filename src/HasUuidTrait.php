@@ -1,8 +1,8 @@
 <?php
-namespace JamesMills\Uuid;
 
-use JamesMills\Uuid\Exception\MissingUuidColumnException;
-use Ramsey\Uuid\Uuid;
+namespace KyleBoehlen\Uuid;
+
+use Illuminate\Support\Str;
 
 trait HasUuidTrait
 {
@@ -11,7 +11,7 @@ trait HasUuidTrait
         static::creating(function ($model) {
 
             if (!$model->uuid) {
-                $model->uuid = (string)Uuid::uuid4();
+                $model->uuid = (string) Str::uuid();
             }
         });
     }

@@ -11,10 +11,14 @@ The trait listens to the `creating` event. It generates a new UUID and saves it 
 
 Featured in [Laravel News](https://laravel-news.com/eloquent-uuid-package-for-laravel)
 
+The original package is no longer maintained, this fork is updated to be compatible with Laravel 8.0 and Laravel 9.0 where laravel/framework replaces illuminate/support
+
+The author suggested package is not a drop in for this trait, so this fork is a drop in for updated Laravel versions.
+
 ## Installation
 
 ```
-composer require jamesmills/eloquent-uuid
+composer require kyleboehlen/eloquent-uuid
 ```
 
 ## Use
@@ -25,7 +29,8 @@ In order to use this in your models, just put `use HasUuidTrait;`
 <?php
 
 namespace App;
-use JamesMills\Uuid\HasUuidTrait;
+
+use KyleBoehlen\Uuid\HasUuidTrait;
 
 class User extends Eloquent
 {
@@ -64,7 +69,7 @@ Route::get('/user/{uuid}', function($uuid) {
     }
 });
 ```
-Since `uuid` gets registered as `Route Key` using implicit binding[https://laravel.com/docs/5.8/routing#implicit-binding], your resource controllers will use `uuid` instead of default `id` column.
+Since `uuid` gets registered as `Route Key` using implicit binding[https://laravel.com/docs/9.x/routing#implicit-binding], your resource controllers will use `uuid` instead of default `id` column.
 
 ```php
 <?php
@@ -104,4 +109,4 @@ Route::delete('/users', function(Request $request) {
 
 This package is 100% free and open-source, under the MIT license. Use it however you want.
 
-This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/jamesmills/eloquent-uuid) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/kyleboehlen/eloquent-uuid) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.

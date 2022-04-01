@@ -1,6 +1,6 @@
 {
-    "name": "jamesmills/eloquent-uuid",
-    "description": "A Laravel Eloquent Model trait for adding and using a uuid with models",
+    "name": "kyleboehlen/eloquent-uuid",
+    "description": "A Laravel Eloquent Model trait for adding and using a uuid with models updated for Laravel 9",
     "type": "package",
     "license": "MIT",
     "keywords": ["laravel", "eloquent", "uuid"],
@@ -8,16 +8,19 @@
         {
             "name": "James Mills",
             "email": "james@jamesmills.co.uk"
+        },
+        {
+            "name": "Kyle Boehlen",
+            "email": "kyleboehlen@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.2.0",
-        "illuminate/support": "5.4.* || 5.5.* || 5.6.*|| 5.7.*|| 5.8.*|| ^6 || ^7 || ^8",
-        "ramsey/uuid": "^4.1"
+        "php": ">=8.0.2",
+        "laravel/framework": "^8.0 || ^9.0"
     },
     "autoload": {
         "psr-4": {
-            "JamesMills\\Uuid\\": "src/"
+            "KyleBoehlen\\Uuid\\": "src/"
         }
     }
 }
